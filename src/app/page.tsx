@@ -3,11 +3,11 @@ import Navbar from "@/components/Global/Navbar";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import {useState} from "react";
-import {FeatureContainer} from "@/components/pages/Home";
-import FileUpload from "@/components/pages/Upload"
+
+// import FileUpload from "@/components/pages/Upload"
 export default function Home() {
-  const [showUpload, setShowUpload] = useState(false);
-  const FeatureContainesr = ({ title, description, features }: { title: string, description: string, features: string[] }) => (
+  // const [showUpload, setShowUpload] = useState(false);
+  const FeatureContainer = ({ title, description, features }: { title: string, description: string, features: string[] }) => (
     <div className="max-w-lg mx-auto bg-blue-100 text-blue-900 rounded-lg p-8 shadow-lg">
       <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
       <p className="text-lg text-center mb-6">{description}</p>
@@ -19,11 +19,7 @@ export default function Home() {
     </div>
   ); // Add closing parenthesis here
 
-  const handleGetStartedClick = () => {
-    // Code for handling the 'Get Started' click event
-    setShowUpload(true);
-  };
-      
+ 
     
    
  
@@ -42,13 +38,10 @@ export default function Home() {
           </p>
           
           
-          {showUpload ? (
-          <FileUpload />
-        ) : (
-          <button onClick={handleGetStartedClick} className="bg-blue-500 text-white px-4 py-2 rounded-md">
+          <Button className="bg-blue-500 text-white px-4 py-2 rounded-md">
             Get Started &rarr;
-          </button>
-        )}
+          </Button>
+        {/* ) */}
         </section>
         
         <section className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
