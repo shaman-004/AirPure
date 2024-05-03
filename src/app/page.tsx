@@ -3,10 +3,10 @@ import Navbar from "@/components/Global/Navbar";
 import Image from "next/image";
 import {Button} from "@/components/ui/button";
 import {useState} from "react";
+import Link from "next/link"
 
-// import FileUpload from "@/components/pages/Upload"
 export default function Home() {
-  // const [showUpload, setShowUpload] = useState(false);
+  const [showUpload, setShowUpload] = useState(false);
   const FeatureContainer = ({ title, description, features }: { title: string, description: string, features: string[] }) => (
     <div className="max-w-lg mx-auto bg-blue-100 text-blue-900 rounded-lg p-8 shadow-lg">
       <h2 className="text-3xl font-bold text-center mb-4">{title}</h2>
@@ -37,16 +37,17 @@ export default function Home() {
           solution in the market.
           </p>
           
-          
-          <Button className="bg-blue-500 text-white px-4 py-2 rounded-md">
+        <Link href="/Upload">
+          <Button  className="bg-blue-500 text-white px-4 py-2 rounded-md">
             Get Started &rarr;
           </Button>
+          </Link>
         {/* ) */}
         </section>
         
         <section className="flex flex-col items-center justify-center min-h-screen p-8 bg-white">
         <h1 className="text-4xl font-bold text-center text-black/80 mb-8">Features</h1>
-        <div className="grid grid-rows-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <div id="container" className="grid grid-rows-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         <div className="w-full">
           <FeatureContainer
             title="Features 1"
@@ -120,7 +121,7 @@ export default function Home() {
       </div>
       
     </div>
-        <footer className="flex items-center justify-center gap-4 ">
+        <footer id="footer" className="flex items-center justify-center gap-4 ">
           <p className="text-lg font-bold">Made with ❤️ by</p>
           <Image
             src="/vercel.svg"
