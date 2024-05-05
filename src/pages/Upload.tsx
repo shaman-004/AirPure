@@ -1,5 +1,5 @@
 
-import { TypewriterEffect } from '@/components/ui/typewrite'
+
 import React from 'react'
 import "tailwindcss/tailwind.css"
 import Image from 'next/image'
