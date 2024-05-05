@@ -44,7 +44,7 @@ const Navbar = async (props: Props) => {
       
 <aside className="flex items-center gap-4">
   <Link
-    href="/dashboard"
+    href="/Login"
     // className="relative inline-flex h-10 overflow-hidden rounded-full p-[2px] focus:outline-none "
   >
     {/* <span className="absolute inset-[-1000%]  bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
