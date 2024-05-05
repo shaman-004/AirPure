@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: "20"
 
@@ -32,7 +32,7 @@ jobs:
         run: npm run build
 
       - name: Archive Build
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: .next
@@ -43,7 +43,7 @@ jobs:
     needs: build
     steps:
       - name: Download Build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
           name: build
           path: .next
@@ -53,3 +53,6 @@ jobs:
         with:
           branch: gh-pages
           folder: .next
+          
+      - name: Set Deployment URL
+        run: echo "::set-env name=DEPLOYMENT_URL::https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
