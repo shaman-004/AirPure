@@ -107,11 +107,11 @@ export default function Home() {
     <div className="lg:w-1/2 flex justify-center">
         <div className="w-full lg:w-3/4">
           <Image
-            src="/recruit.png"
+            src="/web.png"
             alt="Your Image"
             width={600}
             height={300}
-            className="rounded"
+            className="rounded-3xl"
           />
         </div>
       </div>
