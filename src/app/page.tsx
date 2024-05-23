@@ -14,6 +14,7 @@ export default function Home() {
       <ul className="flex flex-col gap-4 text-lg text-center">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
+          
         ))}
       </ul>
     </div>
