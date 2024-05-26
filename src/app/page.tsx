@@ -18,8 +18,7 @@ export default function Home() {
         ))}
       </ul>
     </div>
-  ); // Add closing parenthesis here
-
+  ); 
  
     
    
