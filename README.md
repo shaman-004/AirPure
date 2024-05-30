@@ -1,7 +1,9 @@
 ## Getting Started
 
 ```
-git clone github-url
+git clone <url>
+
+cd airpure
 ```
 
 First, run the development server:
