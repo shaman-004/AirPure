@@ -5,24 +5,24 @@ import "tailwindcss/tailwind.css"
 import Image from 'next/image'
 import { useState } from 'react'
 const Upload = () => {
-  const [aqi, setAqi] = useState(null);
+//   const [aqi, setAqi] = useState(null);
 
-  const handleFileUpload = async (e:any) => {
-    const file = e.target.files[0];
-    const formData = new FormData();
-    formData.append('image', file);
+//   const handleFileUpload = async (e:any) => {
+//     const file = e.target.files[0];
+//     const formData = new FormData();
+//     formData.append('image', file);
 
-    try {
-      const response = await fetch('http://localhost:3000/upload', {
-        method: 'POST',
-        body: formData
-      });
-      const data = await response.json();
-      setAqi(data.aqi); // Assuming the response contains the AQI value
-    } catch (error) {
-      console.error('Error uploading image:', error);
-    }
-  };
+//     try {
+//       const response = await fetch('http://localhost:3000/upload', {
+//         method: 'POST',
+//         body: formData
+//       });
+//       const data = await response.json();
+//       setAqi(data.aqi); // Assuming the response contains the AQI value
+//     } catch (error) {
+//       console.error('Error uploading image:', error);
+//     }
+//   };
   return (
     <>
     
@@ -49,11 +49,11 @@ const Upload = () => {
        <Image className='absolute z-[-2] top-[-8px] bottom-[-20px] left-[40px]  object-cover' src="/recruit.png" alt="Image" width={800} height={200} />
       
       <input id="file-upload" type="file" accept="image/*" className="hidden" />
-      {aqi && (
+      
               <div className="text-center text-lg font-semibold text-gray-800">
-                AQI: {aqi}
+                
               </div>
-      )}
+      
     </div>
   </section>
 </main>
